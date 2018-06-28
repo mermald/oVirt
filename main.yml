@@ -7,8 +7,3 @@
         username: admin@internal
         ca_file: /etc/pki/ovirt-engine/ca.pem
         password: "B@ndito0317"
-
-    - ovirt_vms:
-        auth: "{{ ovirt_auth }}"
-        state: stopped
-        name: awx1.sphere.us
