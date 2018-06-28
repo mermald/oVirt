@@ -5,5 +5,5 @@
       ovirt_auth:
         url: https://strato.sphere.us/ovirt-engine/api
         username: admin@internal
-        ca_file: ca.pem
+        ca_file: /etc/pki/ovirt-engine/ca.pem
         password: "B@ndito0317"
