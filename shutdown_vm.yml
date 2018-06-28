@@ -3,7 +3,8 @@
   hosts: all
   tasks:
     - name: Install SDK Python
-      yum: ovirt-engine-sdk-python
+      yum: 
+        name: ovirt-engine-sdk-python
       
     - name: Stop VM
       ovirt:
