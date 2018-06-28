@@ -1,6 +1,6 @@
 ---
 - name: Stop VM
-  hosts: all
+  hosts: strato.sphere.us
   tasks:
     - name: Install SDK Python
       yum: 
