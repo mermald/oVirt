@@ -1,5 +1,6 @@
 ---
 - name: Stop VM
+  hosts: all
   ovirt:
     instance_name: awx1.sphere.us
     state: stopped
