@@ -20,7 +20,7 @@
            state: absent
            name: myvm
 
-    always:
+- always:
       - name: Always revoke the SSO token
         ovirt_auth:
           state: absent
