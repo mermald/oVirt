@@ -1,0 +1,8 @@
+---
+- name: Stop VM
+  ovirt:
+    instance_name: awx1.sphere.us
+    state: stopped
+    user: admin@internal
+    password: B@ndito0317
+    url: https://strato.sphere.us
