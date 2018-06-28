@@ -10,5 +10,10 @@
 
     - ovirt_vms:
         auth: "{{ ovirt_auth }}"
-        state: running
-        name: awx1.sphere.us
+          state: running
+          name: awx1.sphere.us
+
+    - name: Always revoke the SSO token
+        ovirt_auth:
+          state: absent
+          ovirt_auth: "{{ ovirt_auth }}"
