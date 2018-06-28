@@ -10,8 +10,8 @@
 
     - ovirt_vms:
         auth: "{{ ovirt_auth }}"
-          state: stopped
-          name: awx1.sphere.us
+        state: stopped
+        name: awx1.sphere.us
 
     - name: Always revoke the SSO token
         ovirt_auth:
