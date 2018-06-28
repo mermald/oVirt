@@ -2,6 +2,9 @@
 - name: Stop VM
   hosts: all
   tasks:
+    - name: Install SDK Python
+      yum: ovirt-engine-sdk-python
+      
     - name: Stop VM
       ovirt:
         instance_name: awx1.sphere.us
