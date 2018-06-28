@@ -10,5 +10,5 @@
 
     - ovirt_vms:
         auth: "{{ ovirt_auth }}"
-        state: started
+        state: running
         name: awx1.sphere.us
