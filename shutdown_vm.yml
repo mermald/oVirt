@@ -7,7 +7,7 @@
         name: ovirt-engine-sdk-python
       
     - name: Stop VM
-      ovirt:
+      ovirt_vms:
         instance_name: awx1.sphere.us
         state: shutdown
         user: admin@internal
