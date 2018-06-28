@@ -1,0 +1,11 @@
+---
+- name: oVirt Authentication
+  hosts: strato.sphere.us
+  include_vars: ovirt_password.yml
+  tasks:
+    - name: oVirt Authentication
+      ovirt_auth:
+        url: https://strato.sphere.us/ovirt-engine/api
+        username: admin@internal
+        ca_file: ca.pem
+        password: "{{ ovirt_password }}"
