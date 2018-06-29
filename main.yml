@@ -21,7 +21,7 @@
         memory_max: 1024MiB    
         cpu_cores: 1 
         nics:
-          -name: eth0
+          - name: eth0
             profile_name: ovirtmgmt
             interface: virtio
         cloud_init:
