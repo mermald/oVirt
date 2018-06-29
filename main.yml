@@ -26,8 +26,8 @@
         memory_max: 1024MiB    
         cpu_cores: 1   
         
-    - name: Always revoke the SSO token
-      ovirt_auth: 
-        state: absent
-        auth: "{{ ovirt_auth }}"
+    #- name: Always revoke the SSO token
+     # ovirt_auth: 
+      #  state: absent
+       # auth: "{{ ovirt_auth }}"
         
