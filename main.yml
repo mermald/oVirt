@@ -8,6 +8,7 @@
         ca_file: /etc/pki/ovirt-engine/ca.pem
         password: "B@ndito0317"
 
+    - name: Build VM Shell
     - ovirt_vms:
         auth: "{{ ovirt_auth }}"
         state: present
@@ -20,13 +21,17 @@
         memory_max: 1024MiB    
         cpu_cores: 1 
         nics:
-          eth0:
+          -name: eth0
             profile_name: ovirtmgmt
             interface: virtio
-            proto: static
-            ip: "10.128.10.101"
-            netmask: "255.255.255.0"
-            gateway: "10.128.10.1"
+        cloud_init:
+          nic_boot_protocol: static
+          nic_ip_address: 10.128.10.101
+          nic_netmask: 255.255.255.0
+          nic_gateway: 10.128.10.1
+          nic_name: eth0
+          nic_on_boot: true
+          host_name: ansible_test.sphere.us
 
     - name: Always revoke the SSO token
       ovirt_auth: 
