@@ -22,24 +22,12 @@
         auth: "{{ ovirt_auth }}"
         state: registered
         vnic_profile_mappings: "ovirtmgmt"
-        nics:
-            name: eth1
-            interface: virtio
-            state: present
-        cloud_init:
-          nic_boot_protocol: static
-          nic_ip_address: 10.128.10.101
-          nic_netmask: 255.255.255.0
-          nic_gateway: 10.128.10.1
-          nic_name: eth1
-          nic_on_boot: true
-          host_name: "ansible_test.sphere.us"
-          user_name: root
-          root_password: password
 
     - ovirt_vms:
         auth: "{{ ovirt_auth }}"
         memory: 1GiB
+        memory_guaranteed: 1024MiB
+        memory_max: 1024MiB 
         cpu_cores: 1
 
     - name: Always revoke the SSO token
