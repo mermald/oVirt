@@ -23,7 +23,7 @@
         state: registered
         vnic_profile_mappings: "ovirtmgmt"
 
-    -   name: Set memory
+    -   name: Set RAM
         auth: "{{ ovirt_auth }}"
         state: present
         memory: 1GiB
