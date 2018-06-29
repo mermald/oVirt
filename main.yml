@@ -9,7 +9,7 @@
         password: "B@ndito0317"
 
     - name: Build VM Shell
-    - ovirt_vms:
+      ovirt_vms:
         auth: "{{ ovirt_auth }}"
         state: present
         template: CentOS_7_Generic
