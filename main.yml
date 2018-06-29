@@ -6,4 +6,18 @@
         url: https://strato.sphere.us/ovirt-engine/api
         username: admin@internal
         ca_file: /etc/pki/ovirt-engine/ca.pem
-        password: 
+        password: "B@ndito0317"
+
+    - ovirt_vms:
+        state: present
+        name: ansible_test.sphere.us
+        operating_system: rhel_7x64
+
+    - ovirt_vms:
+        state: registered
+        vnic_profile_mappings: "ovirtmgmt"
+
+    - name: Always revoke the SSO token
+      ovirt_auth:
+        state: absent
+        ovirt_auth: "{{ ovirt_auth }}"
