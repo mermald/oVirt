@@ -18,6 +18,7 @@
         operating_system: rhel_7x64
 
     - ovirt_vms:
+        name: ansible_test.sphere.us
         auth: "{{ ovirt_auth }}"
         state: registered
         vnic_profile_mappings: "ovirtmgmt"
