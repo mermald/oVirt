@@ -23,8 +23,7 @@
         state: registered
         vnic_profile_mappings: "ovirtmgmt"        
         memory_guaranteed: 1024MiB
-        memory_max: 1024MiB
-        cpu_cores: 1 
+        memory_max: 1024MiB       
         
     - name: Always revoke the SSO token
       ovirt_auth:
