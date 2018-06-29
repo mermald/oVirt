@@ -20,7 +20,7 @@
         memory_max: 1024MiB    
         cpu_cores: 1 
         nics:
-          - name: eth1
+          eth0:
             profile_name: ovirtmgmt
             interface: virtio
             proto: static
