@@ -21,8 +21,7 @@
         name: ansible_test.sphere.us
         auth: "{{ ovirt_auth }}"
         state: registered
-        vnic_profile_mappings: "ovirtmgmt"
-        memory: 1GiB
+        vnic_profile_mappings: "ovirtmgmt"        
         memory_guaranteed: 1024MiB
         memory_max: 1024MiB
         cpu_cores: 1 
