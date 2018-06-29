@@ -25,9 +25,11 @@
 
     - ovirt_vms:
         auth: "{{ ovirt_auth }}"
+        state: present
         memory: 1GiB
         memory_guaranteed: 1024MiB
-        memory_max: 1024MiB 
+        memory_max: 1024MiB
+        cpu_cores: 1 
         
     - name: Always revoke the SSO token
       ovirt_auth:
