@@ -23,7 +23,7 @@
           - name: eth1
             profile_name: ovirtmgmt
             interface: virtio
-        cloud_init:
+        cloud-init:
           nic_boot_protocol: static
           nic_ip_address: 10.128.10.101
           nic_netmask: 255.255.255.0
@@ -31,7 +31,7 @@
           nic_name: eth1
           nic_on_boot: true
           host_name: ansible_test.sphere.us
-        
+                
     - name: Always revoke the SSO token
       ovirt_auth: 
         state: absent
