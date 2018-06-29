@@ -15,19 +15,13 @@
         cluster: "Cluster01"
         name: "ansible_test.sphere.us"
         description: "Test deployment with Ansible"
-        operating_system: rhel_7x64
-
-    - ovirt_vms:
-        name: ansible_test.sphere.us
-        auth: "{{ ovirt_auth }}"
-        state: registered
-        vnic_profile_mappings: "ovirtmgmt"        
+        operating_system: rhel_7x64            
         memory_guaranteed: 1024MiB
         memory_max: 1024MiB    
         cpu_cores: 1   
         
-    #- name: Always revoke the SSO token
-     # ovirt_auth: 
-      #  state: absent
-       # auth: "{{ ovirt_auth }}"
+    - name: Always revoke the SSO token
+      ovirt_auth: 
+        state: absent
+        ovirt_auth: "{{ ovirt_auth }}"
         
