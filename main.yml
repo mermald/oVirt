@@ -11,7 +11,8 @@
     - ovirt_vms:
         auth: "{{ ovirt_auth }}"
         state: present
-        name: ansible_test.sphere.us
+        cluster: "Cluster01"
+        name: "ansible_test.sphere.us"
         operating_system: rhel_7x64
 
     - ovirt_vms:
