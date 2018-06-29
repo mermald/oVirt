@@ -18,10 +18,8 @@
         operating_system: rhel_7x64            
         memory_guaranteed: 1024MiB
         memory_max: 1024MiB    
-        cpu_cores: 1   
-        vnic_profile_mappings:
-          source_network_name: ovirtmgmt
-          source_profile_name: ovirtmgmt
+        cpu_cores: 1 
+        
         cloud_init:
           nic_boot_protocol: static
           nic_ip_address: 10.128.10.101
